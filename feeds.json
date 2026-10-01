@@ -29,7 +29,6 @@
     { "name": "Fortune", "url": "https://fortune.com/feed/fortune-feeds/?id=3230629" }
   ],
   "Business/Iceland": [
-    { "name": "Viðskiptablaðið", "url": "https://www.vb.is/rss/" },
     { "name": "Vísir Viðskipti", "url": "https://www.visir.is/rss/vidskipti", "days": 5 },
     { "name": "mbl Viðskipti", "url": "https://www.mbl.is/feeds/vidskipti/" }
   ],
@@ -38,7 +37,7 @@
     { "name": "Apricitas Economics", "url": "https://www.apricitas.io/feed", "days": 30 },
     { "name": "Marginal Revolution", "url": "https://marginalrevolution.com/feed" },
     { "name": "Net Interest", "url": "https://www.netinterest.co/feed", "days": 14 },
-    { "name": "Doomberg", "url": "https://doomberg.substack.com/feed", "days": 7 }
+    { "name": "Doomberg", "url": "https://newsletter.doomberg.com/feed", "days": 7 }
   ],
   "Markets/News": [
     { "name": "WSJ Markets", "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain" },
@@ -54,7 +53,6 @@
     { "name": "Abnormal Returns", "url": "https://abnormalreturns.com/feed/", "days": 5 },
     { "name": "Mostly Borrowed Ideas", "url": "https://www.mbi-deepdives.com/feed", "days": 14 },
     { "name": "Compounding Quality", "url": "https://www.compoundingquality.net/feed", "days": 14 },
-    { "name": "Klement on Investing", "url": "https://klementoninvesting.substack.com/feed", "days": 7 },
     { "name": "Fabricated Knowledge", "url": "https://www.fabricatedknowledge.com/feed", "days": 30 },
     { "name": "Patrick Boyle", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCASM0cgfkJxQ1ICmRilfHLw", "days": 14 }
   ],
@@ -83,15 +81,14 @@
     { "name": "Yannic Kilcher", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew", "days": 14 }
   ],
   "AI/Reads": [
-    { "name": "Import AI", "url": "https://importai.substack.com/feed", "days": 14 },
+    { "name": "Import AI", "url": "https://jack-clark.net/feed/", "days": 14 },
     { "name": "Simon Willison", "url": "https://simonwillison.net/atom/entries/", "days": 7 },
     { "name": "Interconnects", "url": "https://www.interconnects.ai/feed", "days": 14 },
     { "name": "Latent Space", "url": "https://www.latent.space/feed", "days": 14 },
     { "name": "Ahead of AI", "url": "https://magazine.sebastianraschka.com/feed", "days": 30 },
     { "name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "days": 14 },
     { "name": "AI as Normal Technology", "url": "https://www.normaltech.ai/feed", "days": 30 },
-    { "name": "Gary Marcus", "url": "https://garymarcus.substack.com/feed", "days": 7 },
-    { "name": "Zvi Mowshowitz", "url": "https://thezvi.substack.com/feed", "days": 7 },
+    { "name": "Zvi Mowshowitz", "url": "https://thezvi.wordpress.com/feed/", "days": 7 },
     { "name": "Dwarkesh Podcast", "url": "https://www.dwarkesh.com/feed", "days": 30 },
     { "name": "Andrej Karpathy", "url": "https://karpathy.bearblog.dev/feed/", "days": 60 },
     { "name": "Chip Huyen", "url": "https://huyenchip.com/feed.xml", "days": 60 },
@@ -120,8 +117,7 @@
   "Sport/International": [
     { "name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/rss.xml" },
     { "name": "Guardian Football", "url": "https://www.theguardian.com/football/rss" },
-    { "name": "The Athletic", "url": "https://www.nytimes.com/athletic/rss/news/" },
-    { "name": "ESPN", "url": "https://www.espn.com/espn/rss/news" }
+    { "name": "The Athletic", "url": "https://www.nytimes.com/athletic/rss/news/" }
   ],
   "Learn/Investing": [
     { "name": "Aswath Damodaran", "url": "https://aswathdamodaran.blogspot.com/feeds/posts/default", "days": 90 },
