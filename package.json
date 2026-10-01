@@ -1,0 +1,13 @@
+{
+  "name": "the-brief",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal news site built from RSS feeds",
+  "scripts": {
+    "fetch": "node scripts/fetch.mjs",
+    "serve": "npx --yes serve ."
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

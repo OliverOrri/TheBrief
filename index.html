@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Brief</title>
+<style>
+  :root{
+    --cream:#F2ECDF;
+    --paper:#F7F3EA;
+    --ink:#161513;
+    --muted:#77705F;
+    --rule:#D9D0BD;
+    --ph:#E4DCCB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{background:var(--cream)}
+  body{
+    background:var(--cream);color:var(--ink);
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.35;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+
+  /* Masthead */
+  .mast{padding-top:24px}
+  .topline{display:flex;justify-content:space-between;gap:16px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .title{font-size:clamp(64px,13vw,168px);font-weight:700;letter-spacing:-.055em;line-height:.85;margin:22px 0 26px -.04em}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:10;background:var(--cream);border-top:1.5px solid var(--ink);border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;gap:30px;overflow-x:auto;scrollbar-width:none}
+  nav .wrap::-webkit-scrollbar{display:none}
+  nav button{background:none;border:0;font:inherit;font-size:13px;color:var(--muted);padding:14px 0 13px;cursor:pointer;white-space:nowrap;border-bottom:1.5px solid transparent;margin-bottom:-1px}
+  nav button:hover{color:var(--ink)}
+  nav button.active{color:var(--ink);border-color:var(--ink)}
+
+  /* Meta line */
+  .meta{display:flex;gap:8px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .meta .dot{opacity:.5}
+
+  .img{background:var(--ph);aspect-ratio:3/2;overflow:hidden}
+  .img img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  a:hover .img img{transform:scale(1.025)}
+  a:hover h3, a:hover h2{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+  /* Lead */
+  .lead{display:grid;grid-template-columns:7fr 4fr;gap:40px;padding:36px 0 48px;border-bottom:1px solid var(--rule)}
+  .lead .hero .img{aspect-ratio:16/10;margin-bottom:18px}
+  .lead h2{font-size:clamp(28px,3.4vw,44px);font-weight:600;letter-spacing:-.025em;line-height:1.02;max-width:20ch}
+  .lead .sum{margin-top:12px;font-size:16px;color:#3d3a34;max-width:56ch}
+  .latest h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;padding-bottom:10px;border-bottom:1.5px solid var(--ink)}
+  .latest a{display:block;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .latest h3{font-size:16px;font-weight:500;letter-spacing:-.01em;line-height:1.22}
+  .latest .meta{margin-bottom:5px}
+
+  /* Sections */
+  section.cat{padding:44px 0 8px}
+  .cat-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid var(--ink);padding-bottom:10px;margin-bottom:24px}
+  .cat-head h2{font-size:28px;font-weight:600;letter-spacing:-.03em}
+  .cat-head button{background:none;border:0;font:inherit;font-size:12px;color:var(--muted);cursor:pointer;letter-spacing:.04em}
+  .cat-head button:hover{color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:36px 28px;padding-bottom:36px}
+  .card .img{margin-bottom:14px}
+  .card h3{font-size:17px;font-weight:500;letter-spacing:-.012em;line-height:1.2}
+  .card.big{grid-column:span 2;grid-row:span 2}
+  .card.big h3{font-size:26px;font-weight:600;letter-spacing:-.022em;line-height:1.08}
+  .card.big .img{aspect-ratio:4/3}
+  .card .sum{margin-top:8px;font-size:14px;color:#4a463f}
+  .card.text{border-top:1px solid var(--rule);padding-top:14px}
+  .count{font-size:12px;color:var(--muted);margin-left:10px;font-weight:400;letter-spacing:0}
+
+  footer{border-top:1.5px solid var(--ink);margin-top:24px;padding:22px 0 48px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  /* Responsive */
+  @media (max-width:960px){
+    .lead{grid-template-columns:1fr;gap:32px}
+    .grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:600px){
+    .wrap{padding:0 16px}
+    .title{margin:16px 0 18px}
+    .topline .hide-sm{display:none}
+    nav .wrap{gap:22px}
+    .lead{padding:24px 0 36px}
+    .grid{grid-template-columns:1fr;gap:28px}
+    .card.big{grid-column:auto;grid-row:auto}
+    .card.big h3{font-size:23px}
+    .card:not(.big):not(.text){display:grid;grid-template-columns:1fr 112px;gap:14px;align-items:start}
+    .card:not(.big):not(.text) .img{order:2;margin:0;aspect-ratio:1/1}
+    .card:not(.big):not(.text) .sum{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="topline">
+      <span id="date"></span>
+      <span class="hide-sm">Reykjavík</span>
+      <span id="updated">Updated —</span>
+    </div>
+    <h1 class="title">The Brief</h1>
+  </div>
+</header>
+
+<nav><div class="wrap" id="nav"></div></nav>
+
+<main class="wrap" id="main"></main>
+
+<div class="wrap">
+  <footer>
+    <span id="foot-count"></span>
+    <span id="foot-note">Sample content — replaced by live feeds once connected</span>
+  </footer>
+</div>
+
+<script>
+/* ---------- Config ---------- */
+const CATEGORIES = ["Iceland","World","Business","AI","Fashion","Music"];
+const REFRESH_MINUTES = 15;
+
+/* ---------- Sample data (same shape the feed fetcher will output) ----------
+   { id, category, source, title, summary, link, image, published (ISO) }      */
+const S = (category, source, title, minsAgo, summary = "", img = true) => ({category, source, title, minsAgo, summary, img});
+const RAW = [
+  S("Iceland","RÚV","Seismic activity on the Reykjanes peninsula remains under close watch",22,"Monitoring teams report steady ground uplift as authorities review evacuation readiness for nearby communities."),
+  S("Iceland","Vísir","Tourist numbers hold steady through September",64,"Hotel occupancy in the capital region stayed close to last year's level."),
+  S("Iceland","Morgunblaðið","Central Bank of Iceland signals a cautious path on interest rates",95),
+  S("Iceland","Heimildin","Inside the debate over housing supply in the capital area",140,"",false),
+  S("Iceland","RÚV","New ferry route proposed for Westfjords communities",210),
+  S("Iceland","Vísir","Harpa unveils its winter concert season",300,"",false),
+
+  S("World","Reuters","EU leaders meet to discuss energy security ahead of winter",15,"Ministers are weighing joint gas purchasing and grid upgrades as storage levels near capacity."),
+  S("World","BBC","Climate talks enter their final week with key questions unresolved",48),
+  S("World","AP","Coalition talks stall as parties trade proposals",120,"",false),
+  S("World","Reuters","Global shipping rates ease as port congestion clears",175),
+  S("World","BBC","Leaders agree a framework on ocean protection",260),
+  S("World","AP","Record autumn temperatures recorded across southern Europe",330,"",false),
+
+  S("Business","Financial Times","European stocks edge higher as bond yields slip",31,"Banks and industrials led gains while investors priced in a slower pace of rate moves."),
+  S("Business","Bloomberg","Luxury groups face cooling demand in key Asian markets",77),
+  S("Business","The Economist","Why private credit is reshaping corporate lending",150,"",false),
+  S("Business","Reuters","Nordic banks report solid quarterly margins",190),
+  S("Business","Bloomberg","Oil steadies after a volatile week",245,"",false),
+  S("Business","Financial Times","The quiet growth of Nordic asset management",380),
+
+  S("AI","MIT Technology Review","Researchers map how language models store facts",40,"A new interpretability study traces specific knowledge to identifiable internal features."),
+  S("AI","Hugging Face","A practical guide to evaluating AI agents",88),
+  S("AI","Ars Technica","Inside the race to build smaller, cheaper models",132),
+  S("AI","TechCrunch","Startup raises funding for AI tools aimed at banks",205,"",false),
+  S("AI","The Verge","What on-device AI means for the next generation of phones",270),
+  S("AI","MIT Technology Review","Benchmark study questions how we measure reasoning",410,"",false),
+
+  S("Fashion","Permanent Style","The case for a soft-shouldered winter suit",55,"Lighter construction, heavier cloth: why the combination works for the colder months."),
+  S("Fashion","The Rake","Inside a Neapolitan tailoring workshop",110),
+  S("Fashion","Business of Fashion","Quiet luxury's next chapter",160,"",false),
+  S("Fashion","Vogue Business","Why mills are betting on lighter flannels",230),
+  S("Fashion","GQ","Building a wardrobe around three jackets",290),
+  S("Fashion","Highsnobiety","Paris menswear: the key takeaways",360,"",false),
+
+  S("Music","Resident Advisor","RA Podcast: two hours of deep, rolling house",70,"A long-form mix moving from dubby warm-ups into peak-time grooves."),
+  S("Music","DJ Mag","The labels shaping minimal house right now",125),
+  S("Music","Mixmag","Studio diary: building a hybrid DJ setup",185),
+  S("Music","Resident Advisor","Ten records that defined the season",240,"",false),
+  S("Music","DJ Mag","Summer festival lineup announced",320),
+  S("Music","Mixmag","Reykjavík club night returns with new residents",400,"",false),
+];
+const now = Date.now();
+const SAMPLE = RAW.map((r,i) => ({
+  id: "s"+i,
+  category: r.category,
+  source: r.source,
+  title: r.title,
+  summary: r.summary,
+  link: "#",
+  image: r.img ? `https://picsum.photos/seed/brief${i+7}/1200/800` : null,
+  published: new Date(now - r.minsAgo*60000).toISOString()
+}));
+
+/* ---------- State ---------- */
+let items = [];
+let active = "All";
+let isSample = true;
+
+/* ---------- Helpers ---------- */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function ago(iso){
+  const m = Math.max(0, Math.round((Date.now() - new Date(iso))/60000));
+  if (m < 1) return "Just now";
+  if (m < 60) return m + " min";
+  const h = Math.round(m/60);
+  if (h < 24) return h + " h";
+  return Math.round(h/24) + " d";
+}
+const byNewest = (a,b) => new Date(b.published) - new Date(a.published);
+const meta = it => `<div class="meta"><span>${esc(it.source)}</span><span class="dot">·</span><span>${ago(it.published)}</span></div>`;
+const img = it => it.image ? `<div class="img"><img src="${esc(it.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()"></div>` : "";
+const target = it => it.link && it.link !== "#" ? ` href="${esc(it.link)}" target="_blank" rel="noopener"` : ` href="#"`;
+
+function card(it, big=false){
+  const cls = ["card"]; if (big) cls.push("big"); if (!it.image) cls.push("text");
+  const sum = (big || !it.image) && it.summary ? `<p class="sum">${esc(it.summary)}</p>` : "";
+  return `<a class="${cls.join(" ")}"${target(it)}>${img(it)}<div>${meta(it)}<h3>${esc(it.title)}</h3>${sum}</div></a>`;
+}
+
+/* ---------- Render ---------- */
+function renderNav(){
+  const tabs = ["All", ...CATEGORIES];
+  document.getElementById("nav").innerHTML = tabs.map(t =>
+    `<button class="${t===active?"active":""}" data-cat="${t}">${t}</button>`).join("");
+}
+
+function section(cat, list, limit){
+  if (!list.length) return "";
+  const shown = limit ? list.slice(0, limit) : list;
+  // the newest item with a photo leads the section
+  const leadIdx = shown.findIndex(i => i.image);
+  const ordered = leadIdx > 0 ? [shown[leadIdx], ...shown.filter((_,i)=>i!==leadIdx)] : shown;
+  const more = limit && list.length > limit
+    ? `<button data-cat="${cat}">All ${list.length} →</button>` : "";
+  return `<section class="cat">
+    <div class="cat-head"><h2>${cat}<span class="count">${list.length} new</span></h2>${more}</div>
+    <div class="grid">${ordered.map((it,i) => card(it, i===0 && it.image)).join("")}</div>
+  </section>`;
+}
+
+function render(){
+  renderNav();
+  const main = document.getElementById("main");
+  const sorted = [...items].sort(byNewest);
+
+  if (active === "All"){
+    const hero = sorted.find(i => i.image);
+    const latest = sorted.filter(i => i !== hero).slice(0, 6);
+    const lead = hero ? `<div class="lead">
+      <a class="hero"${target(hero)}>${img(hero)}${meta(hero)}<h2>${esc(hero.title)}</h2>${hero.summary?`<p class="sum">${esc(hero.summary)}</p>`:""}</a>
+      <div class="latest"><h4>Latest</h4>${latest.map(it => `<a${target(it)}><div class="meta"><span>${esc(it.category)}</span><span class="dot">·</span><span>${esc(it.source)}</span><span class="dot">·</span><span>${ago(it.published)}</span></div><h3>${esc(it.title)}</h3></a>`).join("")}</div>
+    </div>` : "";
+    main.innerHTML = lead + CATEGORIES.map(c =>
+      section(c, sorted.filter(i => i.category === c && i !== hero), 5)).join("");
+  } else {
+    main.innerHTML = section(active, sorted.filter(i => i.category === active));
+  }
+
+  document.getElementById("foot-count").textContent = `${items.length} stories · ${new Set(items.map(i=>i.source)).size} sources`;
+  document.getElementById("foot-note").style.display = isSample ? "" : "none";
+}
+
+/* ---------- Data loading ---------- */
+async function load(){
+  let t = new Date();
+  try{
+    const r = await fetch("feed.json?t=" + Date.now(), {cache:"no-store"});
+    if (!r.ok) throw 0;
+    const d = await r.json();
+    if (!(d.items || []).length) throw 0;
+    items = d.items; isSample = false;
+    if (d.updated) t = new Date(d.updated);
+  }catch(e){ items = SAMPLE; isSample = true; }
+  document.getElementById("updated").textContent =
+    "Updated " + t.toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit"});
+  render();
+}
+
+/* ---------- Events ---------- */
+document.addEventListener("click", e => {
+  const b = e.target.closest("button[data-cat]");
+  if (b){ active = b.dataset.cat; render(); window.scrollTo({top: document.querySelector("nav").offsetTop, behavior:"smooth"}); }
+});
+
+document.getElementById("date").textContent =
+  new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+
+load();
+setInterval(load, REFRESH_MINUTES*60000);
+</script>
+</body>
+</html>

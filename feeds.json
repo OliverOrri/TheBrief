@@ -1,0 +1,42 @@
+{
+  "Iceland": [
+    { "name": "RÚV", "url": "https://www.ruv.is/rss/frettir" },
+    { "name": "Vísir", "url": "https://www.visir.is/rss/allt" },
+    { "name": "Morgunblaðið", "url": "https://www.mbl.is/feeds/innlent/" },
+    { "name": "Heimildin", "url": "https://heimildin.is/rss/" }
+  ],
+  "World": [
+    { "name": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml" },
+    { "name": "The Guardian", "url": "https://www.theguardian.com/world/rss" },
+    { "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml" },
+    { "name": "NYT", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" }
+  ],
+  "Business": [
+    { "name": "Financial Times", "url": "https://www.ft.com/rss/home" },
+    { "name": "Bloomberg", "url": "https://feeds.bloomberg.com/markets/news.rss" },
+    { "name": "The Economist", "url": "https://www.economist.com/finance-and-economics/rss.xml" },
+    { "name": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html" }
+  ],
+  "AI": [
+    { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/" },
+    { "name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml" },
+    { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index" },
+    { "name": "TechCrunch", "url": "https://techcrunch.com/category/artificial-intelligence/feed/" },
+    { "name": "The Verge", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" },
+    { "name": "OpenAI", "url": "https://openai.com/news/rss.xml" },
+    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml" }
+  ],
+  "Fashion": [
+    { "name": "Permanent Style", "url": "https://www.permanentstyle.com/feed" },
+    { "name": "Highsnobiety", "url": "https://www.highsnobiety.com/feed/" },
+    { "name": "Hypebeast", "url": "https://hypebeast.com/feed" },
+    { "name": "GQ", "url": "https://www.gq.com/feed/rss" },
+    { "name": "The Rake", "url": "https://therake.com/feed/" }
+  ],
+  "Music": [
+    { "name": "Resident Advisor", "url": "https://ra.co/xml/news.xml" },
+    { "name": "RA Podcast", "url": "https://ra.co/xml/podcast.xml" },
+    { "name": "Mixmag", "url": "https://mixmag.net/rss.xml" },
+    { "name": "DJ Mag", "url": "https://djmag.com/feeds/rss" }
+  ]
+}
