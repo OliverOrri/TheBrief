@@ -185,7 +185,14 @@
 // "Tab/Sub-tab" — the live list comes from feed.json (the order of feeds.json); this is the fallback
 let CATEGORIES = ["Iceland","World","Business/Global","Business/Iceland","Business/Economics","Markets/News","Markets/Analysis",
   "AI/News","AI/Research","AI/Reads","Tech","Science","Sport/Iceland","Sport/International","Learn/Investing","Learn/AI","Fashion","Music"];
-const NOT_ON_HOME = ["Learn"];          // evergreen material lives in its own tab, not the front page
+// The "All" front page: [section title, tab it links to, feed categories it shows]
+const HOME = [
+  ["AI News",  "AI/News",  ["AI/News"]],
+  ["Business", "Business", ["Business/Global", "Business/Iceland"]],
+  ["Markets",  "Markets",  ["Markets/News"]],
+  ["Tech",     "Tech",     ["Tech"]],
+  ["Fashion",  "Fashion",  ["Fashion"]],
+];
 const REFRESH_MINUTES = 15;
 
 /* ---------- Learn: hand-picked places to start ---------- */
@@ -372,15 +379,15 @@ function render(){
     // don't rebuild the board on the 15-minute refresh, or a game in progress would be lost
     if (!document.getElementById("snake")) { main.innerHTML = snakeHTML(); startSnake(); }
   } else if (active === "All"){
-    const home = sorted.filter(i => !NOT_ON_HOME.includes(topOf(i.category)));
+    const home = sorted.filter(i => HOME.some(([, , cats]) => cats.includes(i.category)));
     const hero = home.find(i => i.image);
     const latest = home.filter(i => i !== hero).slice(0, 6);
     const lead = hero ? `<div class="lead">
       <a class="hero"${target(hero)}>${img(hero)}${meta(hero)}<h2>${esc(hero.title)}</h2>${hero.summary?`<p class="sum">${esc(hero.summary)}</p>`:""}</a>
       <div class="latest"><h4>Latest</h4>${latest.map(it => `<a${target(it)}><div class="meta"><span>${esc(topOf(it.category))}</span><span class="dot">·</span><span>${esc(it.source)}</span><span class="dot">·</span><span>${ago(it.published)}</span></div><h3>${esc(it.title)}</h3></a>`).join("")}</div>
     </div>` : "";
-    main.innerHTML = lead + tabs().filter(t => !NOT_ON_HOME.includes(t)).map(t =>
-      section(t, t, home.filter(i => topOf(i.category) === t && i !== hero), 5)).join("");
+    main.innerHTML = lead + HOME.map(([title, link, cats]) =>
+      section(link, title, home.filter(i => cats.includes(i.category) && i !== hero), 5)).join("");
   } else {
     const subs = subsOf(active);
     const inTab = sorted.filter(i => topOf(i.category) === active);
