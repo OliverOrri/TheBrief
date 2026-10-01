@@ -44,7 +44,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp index.html feed.json _site/
+          cp index.html feed.json favicon.svg _site/
 
       - uses: actions/upload-pages-artifact@v3
         with:
