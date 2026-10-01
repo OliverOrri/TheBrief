@@ -5,7 +5,8 @@ A personal news site built from RSS feeds. Refreshes every 15 minutes via GitHub
 ## How it works
 
 - `feeds.json` lists the sources, grouped by category. Edit it to add or remove feeds.
-- `scripts/fetch.mjs` reads every feed, finds a photo for each story, removes duplicates and writes `feed.json`.
+- `markets.json` lists the stocks, indices and rates shown in the Markets tab (Yahoo Finance symbols).
+- `scripts/fetch.mjs` reads every feed and the market prices, finds a photo for each story, removes duplicates and writes `feed.json`.
 - `.github/workflows/update.yml` runs the fetch every 15 minutes and publishes the site.
 - `index.html` is the site. It loads `feed.json` and shows sample stories if it can't.
 
@@ -32,7 +33,17 @@ Add an entry to the right category in `feeds.json`:
 { "name": "Source name", "url": "https://example.com/feed.xml" }
 ```
 
-To add a new category, add a new key in `feeds.json` and the same name to `CATEGORIES` at the top of the script in `index.html`.
+Stories older than 72 hours are dropped. For sources that post rarely, add `"days"` to keep them longer, e.g. `"days": 30`.
+
+To add a new category, add a new key in `feeds.json`; the tab appears by itself. A key like `"AI/Research"` becomes a sub-tab (Research) inside the AI tab.
+
+## Adding a stock
+
+Add an entry to `markets.json` using its Yahoo Finance symbol (the one in the URL on finance.yahoo.com). `"ticker": true` also shows it in the strip at the top of every page.
+
+```json
+{ "symbol": "AMD", "name": "AMD" }
+```
 
 ## Note
 

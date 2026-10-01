@@ -9,22 +9,140 @@
     { "name": "BBC", "url": "https://feeds.bbci.co.uk/news/world/rss.xml" },
     { "name": "The Guardian", "url": "https://www.theguardian.com/world/rss" },
     { "name": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml" },
-    { "name": "NYT", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" }
+    { "name": "NYT", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml" },
+    { "name": "WSJ World", "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews" },
+    { "name": "DW", "url": "https://rss.dw.com/rdf/rss-en-all" },
+    { "name": "Politico Europe", "url": "https://www.politico.eu/feed/" },
+    { "name": "NPR", "url": "https://feeds.npr.org/1001/rss.xml" },
+    { "name": "Semafor", "url": "https://www.semafor.com/rss.xml" },
+    { "name": "The Atlantic", "url": "https://www.theatlantic.com/feed/all/" },
+    { "name": "Economist Leaders", "url": "https://www.economist.com/leaders/rss.xml", "days": 7 }
   ],
-  "Business": [
+  "Business/Global": [
     { "name": "Financial Times", "url": "https://www.ft.com/rss/home" },
-    { "name": "Bloomberg", "url": "https://feeds.bloomberg.com/markets/news.rss" },
+    { "name": "FT Companies", "url": "https://www.ft.com/companies?format=rss" },
+    { "name": "WSJ Business", "url": "https://feeds.content.dowjones.io/public/rss/WSJcomUSBusiness" },
+    { "name": "Bloomberg Economics", "url": "https://feeds.bloomberg.com/economics/news.rss" },
     { "name": "The Economist", "url": "https://www.economist.com/finance-and-economics/rss.xml" },
-    { "name": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html" }
+    { "name": "Economist Business", "url": "https://www.economist.com/business/rss.xml", "days": 7 },
+    { "name": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html" },
+    { "name": "Fortune", "url": "https://fortune.com/feed/fortune-feeds/?id=3230629" }
   ],
-  "AI": [
+  "Business/Iceland": [
+    { "name": "Viðskiptablaðið", "url": "https://www.vb.is/rss/" },
+    { "name": "Vísir Viðskipti", "url": "https://www.visir.is/rss/vidskipti", "days": 5 },
+    { "name": "mbl Viðskipti", "url": "https://www.mbl.is/feeds/vidskipti/" }
+  ],
+  "Business/Economics": [
+    { "name": "Noahpinion", "url": "https://www.noahpinion.blog/feed", "days": 7 },
+    { "name": "Apricitas Economics", "url": "https://www.apricitas.io/feed", "days": 30 },
+    { "name": "Marginal Revolution", "url": "https://marginalrevolution.com/feed" },
+    { "name": "Net Interest", "url": "https://www.netinterest.co/feed", "days": 14 },
+    { "name": "Doomberg", "url": "https://doomberg.substack.com/feed", "days": 7 }
+  ],
+  "Markets/News": [
+    { "name": "WSJ Markets", "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain" },
+    { "name": "Bloomberg Markets", "url": "https://feeds.bloomberg.com/markets/news.rss" },
+    { "name": "FT Markets", "url": "https://www.ft.com/markets?format=rss" },
+    { "name": "MarketWatch", "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories" },
+    { "name": "CNBC Markets", "url": "https://www.cnbc.com/id/10000664/device/rss/rss.html" },
+    { "name": "Seeking Alpha", "url": "https://seekingalpha.com/market_currents.xml" },
+    { "name": "Investing.com", "url": "https://www.investing.com/rss/news_25.rss" },
+    { "name": "Business Insider", "url": "https://markets.businessinsider.com/rss/news" }
+  ],
+  "Markets/Analysis": [
+    { "name": "Abnormal Returns", "url": "https://abnormalreturns.com/feed/", "days": 5 },
+    { "name": "Mostly Borrowed Ideas", "url": "https://www.mbi-deepdives.com/feed", "days": 14 },
+    { "name": "Compounding Quality", "url": "https://www.compoundingquality.net/feed", "days": 14 },
+    { "name": "Klement on Investing", "url": "https://klementoninvesting.substack.com/feed", "days": 7 },
+    { "name": "Fabricated Knowledge", "url": "https://www.fabricatedknowledge.com/feed", "days": 30 },
+    { "name": "Patrick Boyle", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCASM0cgfkJxQ1ICmRilfHLw", "days": 14 }
+  ],
+  "AI/News": [
+    { "name": "Anthropic", "url": "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_news_rss.xml", "days": 7 },
+    { "name": "OpenAI", "url": "https://openai.com/news/rss.xml", "days": 7 },
+    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml", "days": 7 },
+    { "name": "Google AI", "url": "https://blog.google/technology/ai/rss/", "days": 7 },
+    { "name": "NVIDIA", "url": "https://blogs.nvidia.com/feed/", "days": 7 },
     { "name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/" },
-    { "name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml" },
+    { "name": "The Decoder", "url": "https://the-decoder.com/feed/" },
+    { "name": "Wired", "url": "https://www.wired.com/feed/tag/ai/latest/rss" },
     { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index" },
     { "name": "TechCrunch", "url": "https://techcrunch.com/category/artificial-intelligence/feed/" },
     { "name": "The Verge", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml" },
-    { "name": "OpenAI", "url": "https://openai.com/news/rss.xml" },
-    { "name": "Google DeepMind", "url": "https://deepmind.google/blog/rss.xml" }
+    { "name": "Hugging Face", "url": "https://huggingface.co/blog/feed.xml" }
+  ],
+  "AI/Research": [
+    { "name": "HF Daily Papers", "url": "https://papers.takara.ai/api/feed" },
+    { "name": "Google Research", "url": "https://research.google/blog/rss/", "days": 14 },
+    { "name": "Microsoft Research", "url": "https://www.microsoft.com/en-us/research/feed/", "days": 14 },
+    { "name": "BAIR", "url": "https://bair.berkeley.edu/blog/feed.xml", "days": 30 },
+    { "name": "Lil'Log", "url": "https://lilianweng.github.io/index.xml", "days": 60 },
+    { "name": "The Gradient", "url": "https://thegradient.pub/rss/", "days": 30 },
+    { "name": "Two Minute Papers", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg", "days": 14 },
+    { "name": "Yannic Kilcher", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew", "days": 14 }
+  ],
+  "AI/Reads": [
+    { "name": "Import AI", "url": "https://importai.substack.com/feed", "days": 14 },
+    { "name": "Simon Willison", "url": "https://simonwillison.net/atom/entries/", "days": 7 },
+    { "name": "Interconnects", "url": "https://www.interconnects.ai/feed", "days": 14 },
+    { "name": "Latent Space", "url": "https://www.latent.space/feed", "days": 14 },
+    { "name": "Ahead of AI", "url": "https://magazine.sebastianraschka.com/feed", "days": 30 },
+    { "name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "days": 14 },
+    { "name": "AI as Normal Technology", "url": "https://www.normaltech.ai/feed", "days": 30 },
+    { "name": "Gary Marcus", "url": "https://garymarcus.substack.com/feed", "days": 7 },
+    { "name": "Zvi Mowshowitz", "url": "https://thezvi.substack.com/feed", "days": 7 },
+    { "name": "Dwarkesh Podcast", "url": "https://www.dwarkesh.com/feed", "days": 30 },
+    { "name": "Andrej Karpathy", "url": "https://karpathy.bearblog.dev/feed/", "days": 60 },
+    { "name": "Chip Huyen", "url": "https://huyenchip.com/feed.xml", "days": 60 },
+    { "name": "AI Explained", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw", "days": 14 }
+  ],
+  "Tech": [
+    { "name": "Hacker News", "url": "https://hnrss.org/frontpage?points=150" },
+    { "name": "Techmeme", "url": "https://www.techmeme.com/feed.xml" },
+    { "name": "The Information", "url": "https://www.theinformation.com/feed" },
+    { "name": "WSJ Tech", "url": "https://feeds.content.dowjones.io/public/rss/RSSWSJD" },
+    { "name": "Bloomberg Tech", "url": "https://feeds.bloomberg.com/technology/news.rss" },
+    { "name": "Stratechery", "url": "https://stratechery.com/feed/", "days": 7 },
+    { "name": "Platformer", "url": "https://www.platformer.news/rss/", "days": 7 },
+    { "name": "404 Media", "url": "https://www.404media.co/rss/" }
+  ],
+  "Science": [
+    { "name": "Nature", "url": "https://www.nature.com/nature.rss" },
+    { "name": "Quanta", "url": "https://www.quantamagazine.org/feed/", "days": 7 },
+    { "name": "Science News", "url": "https://www.sciencenews.org/feed" }
+  ],
+  "Sport/Iceland": [
+    { "name": "Fótbolti.net", "url": "https://fotbolti.net/rss.php" },
+    { "name": "RÚV Íþróttir", "url": "https://www.ruv.is/rss/ithrottir" },
+    { "name": "mbl Sport", "url": "https://www.mbl.is/feeds/sport/" }
+  ],
+  "Sport/International": [
+    { "name": "BBC Sport", "url": "https://feeds.bbci.co.uk/sport/rss.xml" },
+    { "name": "Guardian Football", "url": "https://www.theguardian.com/football/rss" },
+    { "name": "The Athletic", "url": "https://www.nytimes.com/athletic/rss/news/" },
+    { "name": "ESPN", "url": "https://www.espn.com/espn/rss/news" }
+  ],
+  "Learn/Investing": [
+    { "name": "Aswath Damodaran", "url": "https://aswathdamodaran.blogspot.com/feeds/posts/default", "days": 90 },
+    { "name": "A Wealth of Common Sense", "url": "https://awealthofcommonsense.com/feed/", "days": 14 },
+    { "name": "Of Dollars and Data", "url": "https://ofdollarsanddata.com/feed/", "days": 30 },
+    { "name": "Morgan Housel", "url": "https://collabfund.com/feed.xml", "days": 90 },
+    { "name": "Humble Dollar", "url": "https://humbledollar.com/feed/", "days": 7 },
+    { "name": "Ben Felix", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCDXTQ8nWmx_EhZ2v-kp7QxA", "days": 60 },
+    { "name": "The Plain Bagel", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCFCEuCsyWP0YkP3CZ3Mr01Q", "days": 60 }
+  ],
+  "Learn/AI": [
+    { "name": "3Blue1Brown", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCYO_jab_esuFRV4b17AJtAw", "days": 90 },
+    { "name": "StatQuest", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCtYLUTtgS3k1Fg4y5tAhLbw", "days": 60 },
+    { "name": "Welch Labs", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UConVfxXodg78Tzh5nNu85Ew", "days": 90 },
+    { "name": "Andrej Karpathy (YouTube)", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ", "days": 365 },
+    { "name": "Sebastian Raschka", "url": "https://sebastianraschka.com/rss_feed.xml", "days": 60 },
+    { "name": "Anthropic Engineering", "url": "https://raw.githubusercontent.com/taobojlen/anthropic-rss-feed/main/anthropic_engineering_rss.xml", "days": 90 },
+    { "name": "Hamel Husain", "url": "https://hamel.dev/index.xml", "days": 90 },
+    { "name": "Eugene Yan", "url": "https://eugeneyan.com/rss/", "days": 180 },
+    { "name": "Jay Alammar", "url": "https://jalammar.github.io/feed.xml", "days": 365 },
+    { "name": "Machine Learning Mastery", "url": "https://machinelearningmastery.com/feed/", "days": 14 }
   ],
   "Fashion": [
     { "name": "Permanent Style", "url": "https://www.permanentstyle.com/feed" },

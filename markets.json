@@ -1,0 +1,35 @@
+{
+  "Indices": [
+    { "symbol": "^GSPC", "name": "S&P 500", "ticker": true },
+    { "symbol": "^IXIC", "name": "Nasdaq", "ticker": true },
+    { "symbol": "^DJI", "name": "Dow Jones" },
+    { "symbol": "^STOXX50E", "name": "Euro Stoxx 50" },
+    { "symbol": "^OMXI15", "name": "OMX Iceland 15", "ticker": true },
+    { "symbol": "^VIX", "name": "VIX" }
+  ],
+  "AI & Big Tech": [
+    { "symbol": "NVDA", "name": "Nvidia", "ticker": true },
+    { "symbol": "MSFT", "name": "Microsoft" },
+    { "symbol": "GOOGL", "name": "Alphabet" },
+    { "symbol": "AMZN", "name": "Amazon" },
+    { "symbol": "META", "name": "Meta" },
+    { "symbol": "AAPL", "name": "Apple" },
+    { "symbol": "TSM", "name": "TSMC" },
+    { "symbol": "AVGO", "name": "Broadcom" },
+    { "symbol": "TSLA", "name": "Tesla" }
+  ],
+  "Iceland": [
+    { "symbol": "ARION.IC", "name": "Arion banki" },
+    { "symbol": "ISB.IC", "name": "Íslandsbanki" },
+    { "symbol": "ICEAIR.IC", "name": "Icelandair" }
+  ],
+  "Rates, FX & Commodities": [
+    { "symbol": "^TNX", "name": "US 10Y yield", "unit": "%", "ticker": true },
+    { "symbol": "ISK=X", "name": "USD/ISK", "ticker": true },
+    { "symbol": "EURISK=X", "name": "EUR/ISK", "ticker": true },
+    { "symbol": "EURUSD=X", "name": "EUR/USD" },
+    { "symbol": "GC=F", "name": "Gold", "ticker": true },
+    { "symbol": "BZ=F", "name": "Brent oil", "ticker": true },
+    { "symbol": "BTC-USD", "name": "Bitcoin", "ticker": true }
+  ]
+}
